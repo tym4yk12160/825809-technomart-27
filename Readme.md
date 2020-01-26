@@ -1,7 +1,7 @@
 # Личный проект «Техномарт»
 
-* Студент: [Misha Yashchuk](https://up.htmlacademy.ru/htmlcss/27/user/825809).
-* Наставник: `Неизвестно`.
+- Студент: [Михайло Ящук](https://up.htmlacademy.ru/htmlcss/27/user/825809).
+- Наставник: [Артур Кудаев](https://up.htmlacademy.ru/htmlcss/27/user/63106).
 
 ---
 
