@@ -1,14 +1,105 @@
-body {
-  padding: 0;
-  margin: 0;
-}
-/* .button-place {
+.producent-input-check {
   display: inline-block;
-  width: 150px;
-  height: 42px;
-  background-color: #63a63e;
+  vertical-align: top;
+  position: relative;
+  cursor: pointer;
+}
+
+.producent-input-check input {
+  width: 27px;
+  height: 23px;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  margin-top: -7px;
+  cursor: pointer;
+  z-index: 10;
+  opacity: 0;
+}
+
+.producent-input-check label {
+  font-size: 14px;
+  line-height: 22px;
+  display: block;
+  padding-left: 30px;
+  position: relative;
+  z-index: 1;
+  cursor: pointer;
+}
+
+.producent-input-check label:before {
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 27px;
+  height: 23px;
+  margin-top: -10px;
+  background: url("../img/checkbox-off.svg") no-repeat;
+  content: "";
+}
+
+.producent-input-check input:checked + label:before {
+  background: url("../img/checkbox-on.svg");
+}
+/* Значки радио */
+.charge-block {
+  display: inline-block;
+  vertical-align: top;
+  position: relative;
+  cursor: pointer;
+}
+
+.charge-block input {
+  width: 27px;
+  height: 23px;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  margin-top: -7px;
+  cursor: pointer;
+  z-index: 10;
+  opacity: 0;
+}
+
+.charge-block label {
+  font-size: 14px;
+  line-height: 22px;
+  display: block;
+  padding-left: 30px;
+  position: relative;
+  z-index: 1;
+  cursor: pointer;
+}
+
+.charge-block label:before {
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 27px;
+  height: 23px;
+  margin-top: -10px;
+  background: url("../img/radio-off.svg.svg") no-repeat;
+  content: "";
+}
+
+.charge-block input:checked + label:before {
+  background: url("../img/radio-on.svg");
+}
+
+.item a:not(.button-item) {
+  display: block;
+  width: 141px;
+  height: 38px;
+  color: white;
   text-decoration: none;
-  color: #fff;
   text-align: center;
-  line-height: 7px;
-} */
+  line-height: 38px;
+  vertical-align: middle;
+  background: url("../img/red-button.svg") no-repeat;
+}
