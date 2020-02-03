@@ -5,23 +5,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Document</title>
+    <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
     <header class="main-header">
       <section class="header-top">
         <a class="header-logo" href="index.html"
-          ><img src="img/ТЕХНОМАРТ.png" alt="логотип Техномарт"
+          ><img
+            src="img/ТЕХНОМАРТ.png"
+            width="220"
+            height="47"
+            alt="логотип Техномарт"
         /></a>
         <div class="icon-search">
+          <img src="img/icon-search.svg" alt="" />
           <input type="search" placeholder="Поиск:" />
         </div>
         <ul>
           <li>
+            <img src="img/icon-bookmark.svg" alt="" />
             <a class="icon-bookmarks" href="#"
               >Закладки: <span class="bookmarks-score">0</span></a
             >
           </li>
           <li class="bg-red">
+            <img src="img/icon-cart.svg" alt="" />
             <a class="icon-basket" href="#"
               >Корзина: <span class="basket-score">10</span></a
             >
@@ -36,18 +44,22 @@
           Интернет-магазин строительных материалов и инструментов для ремонта
         </h2>
         <div class="header-call">
-          <span class="icon-call">+7 (812) 555-05-55</span>
-          <span class="adress"
-            >г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</span
-          >
+          <p>
+            <img src="img/icon-phone.svg" alt="иконка телефона" />
+            +7 (812) 555-05-55
+          </p>
+          <p class="adress">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
         </div>
         <div class="username">
-          <p>Равшан Джамшутович</p>
+          <img src="img/icon-user.svg" alt="" />
+          <span>Равшан Джамшутович</span>
+          <img src="img/icon-logout.svg" alt="" />
         </div>
-        <ul class="user-navigation">
-          <li class="login-link"><a href="#">Мои заказы</a></li>
-          <li class="account-link"><a href="#">Личный кабинет</a></li>
-        </ul>
+        <div class="user-navigation">
+          <a href="#">Мои заказы</a>
+          <span>.</span>
+          <a href="#">Личный кабинет</a>
+        </div>
       </section>
       <!-- Навигация -->
       <nav class="index-nav">
@@ -75,14 +87,10 @@
     <main class="container">
       <div class="wrapper">
         <div class="breadcrums-container">
-          <ul class="breadcrums">
-            <li class="breadcrums-current">
-              <img src="https://via.placeholder.com/15x15" alt="Дом" />
-            </li>
-            <li><a href="index.html">Каталог</a></li>
-            <li><a href="catalog.html">Инструмент</a></li>
-            <li><a href="catalog.html">Перфораторы</a></li>
-          </ul>
+          <img src="img/icon-home.svg" alt="Дом" />
+          <a href="index.html">Каталог</a>
+          <a href="catalog.html">Инструмент</a>
+          <a href="catalog.html">Перфораторы</a>
         </div>
         <h1>ПЕРФОРАТОРЫ</h1>
         <!-- Фильтры -->
@@ -101,7 +109,7 @@
             </div>
           </div>
           <!-- Марка -->
-          <div class="producent-block">
+          <div class="producent-input-check">
             <input id="drill-bosch" type="checkbox" checked />
             <label for="drill-bosch">BOSCH</label>
             <input id="drill-interscol" type="checkbox" />
@@ -157,8 +165,8 @@
           </div>
           <div class="item">
             <div>
-              <a href="#">Купить</a>
-              <a href="#">В Закладки</a>
+              <a class="button-item" href="#">Купить</a>
+              <a class="button-item" href="#">В Закладки</a>
               <p>Перфоратор BOSCH BFG 2000</p>
             </div>
             <div>
@@ -260,7 +268,11 @@
     <footer>
       <section class="footer-top">
         <a class="footer-logo" href="index.html"
-          ><img src="img/ТЕХНОМАРТ_footer.png" alt="логотип Техномарт"
+          ><img
+            src="img/ТЕХНОМАРТ_footer.png"
+            width="220"
+            height="68"
+            alt="логотип Техномарт"
         /></a>
         <ul>
           <li>
@@ -305,17 +317,15 @@
           <ul>
             <li>
               <a href="#"
-                ><img src="img/social_networks.png" alt="иконка Вконтакте"
+                ><img src="img/icon-vk.svg" alt="иконка Вконтакте"
               /></a>
             </li>
             <li>
-              <a href="#"
-                ><img src="img/social_networks.png" alt="иконка Фейсбук"
-              /></a>
+              <a href="#"><img src="img/icon-fb.svg" alt="иконка Фейсбук"/></a>
             </li>
             <li>
               <a href="#"
-                ><img src="img/social_networks.png" alt="иконка Инстаграмм"
+                ><img src="img/icon-insta.svg" alt="иконка Инстаграмм"
               /></a>
             </li>
           </ul>
