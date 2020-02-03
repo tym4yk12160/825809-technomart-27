@@ -81,15 +81,15 @@
   position: absolute;
   left: 0;
   top: 50%;
-  width: 27px;
-  height: 23px;
+  width: 25px;
+  height: 25px;
   margin-top: -10px;
-  background: url("../img/radio-off.svg.svg") no-repeat;
+  background: url("../img/radio-off.svg") no-repeat;
   content: "";
 }
 
 .charge-block input:checked + label:before {
-  background: url("../img/radio-on.svg");
+  background: url("../img/radio-on.svg") no-repeat;
 }
 
 .item a:not(.button-item) {
@@ -101,5 +101,5 @@
   text-align: center;
   line-height: 38px;
   vertical-align: middle;
-  background: url("../img/red-button.svg") no-repeat;
+  /* background: url("../img/red-button.svg") no-repeat; */
 }
