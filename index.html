@@ -29,28 +29,24 @@
             >
           </li>
           <li>
-            <a class="button button-place" href="#">Оформить заказ</a>
+            <button class="button button-place">Оформить заказ</button>
           </li>
         </ul>
       </section>
       <section class="header-contacts">
-        <h2>
+        <p>
           Интернет-магазин строительных материалов и инструментов для ремонта
-        </h2>
+        </p>
         <div class="header-call">
-          <p>
-            <img style="background-color: green;" src="img/icon-phone.svg" alt="иконка телефона">
-            +7 (812) 555-05-55 </p>
+          <button>
+            <img src="img/icon-phone.svg" alt="иконка телефона">
+            +7 (812) 555-05-55 </button>
           <p class="adress"
             >г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
         </div>
         <div class="container-user">
-        <ul class="user-navigation">
-          <li class="login-link">
-            <img src="img/icon-login.svg" alt="иконка входа">
-            <a href="#">Войти</a></li>
-          <li class="account-link"><a href="#">Регистрация</a></li>
-        </ul>
+          <button class="btn btn-login">Войти</button>
+          <button class="btn btn-reg">Регистрация</button>
         </div>
       </section>
       <!-- Навигация -->
@@ -200,10 +196,22 @@
         <div class="maps">
           <h3>КОНТАКТЫ</h3>
           <p>Вы можете забрать товар сами, заехав в наш офис:</p>
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1486.2348805157908!2d16.168547220813114!3d51.20914265432726!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xd1dfb629e3c352ad!2sMcDonald&#39;s!5e0!3m2!1sru!2spl!4v1580484375843!5m2!1sru!2spl"
-              width="300" height="158" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
-          <a href="#">Заблудились?Напишите нам!</a>
+           <a href="url_maps"><img src="img/small_map.png"
+              width="300" height="158" alt="маленькая картинка карты"></a>
+              <form action="url_maps">
+                <img src="img/big_map.png" alt="большая картинка карта">
+                <input type="checkbox">
+              </form>
+          <button>Заблудились?Напишите нам!</button>
+            <form action="URL">
+              <label for="form-name-user">Ваше имя:</label>
+              <input id="form-name-user" type="text" aria-label="ваше имя">
+              <label for="form-email-user">Ваш e-mail:</label>
+              <input id="form-email-user" type="email" aria-label="ваша электронная почта">
+              <label for="form-coments">Текст письма:</label>
+              <textarea id="form-coments" name="comments" id="" cols="30" rows="10" placeholder="В свободной форме"></textarea>
+              <button>Отправить</button>
+            </form>
         </div>
       </section>
       </main>
@@ -251,17 +259,9 @@
       <section class="social-block">
         <p>© 2010–2019 Компания «Техномарт» Все права защищены</p>
         <div class="social-btn">
-          <ul>
-            <li>
-              <a href="#"><img src="img/icon-vk.svg" alt="иконка Вконтакте" /></a>
-            </li>
-            <li>
-              <a href="#"><img src="img/icon-fb.svg" alt="иконка Фейсбук" /></a>
-            </li>
-            <li>
-              <a href="#"><img src="img/icon-insta.svg" alt="иконка Инстаграмм" /></a>
-            </li>
-          </ul>
+          <button class="social-btn vk-btn"></button>
+          <button class="social-btn fb-btn"></button>
+          <button class="social-btn it-btn"></button>
         </div>
         <p>Обратная связь: <span>mail@htmlacademy.ru</span></p>
         <p>Разработано — <span>htmlacademy.ru</span></p>
