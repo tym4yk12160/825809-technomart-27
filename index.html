@@ -67,47 +67,47 @@
     <section class="items-menu">
       <div class="item-menu">
         <p>Материалы</p>
-        <button>на любой вкус</button>
+        <a href="#">На любой вкус</a>
         <img src="img/icon-1.svg" alt="материалы">
         <p>new</p>
       </div>
       <div class="item-menu">
-        <p>Материалы</p>
-        <button>на любой вкус</button>
+        <p>Инструмент</p>
+        <a href="#">На все случаи</a>
         <img src="img/icon-2.svg" alt="инструмент">
-        <p>new</p>
       </div>
       <div class="item-menu">
-        <p>Материалы</p>
-        <button>на любой вкус</button>
+        <p>Техника</p>
+        <a href="#">Для стройки</a>
         <img src="img/icon-3.svg" alt="техника">
-        <p>new</p>
       </div>
       <div item-menu-sliders>
-        <img src="img/photo_slider.png" height="266"  width="620" alt="картинка слайдов">
-          <h3>Дрели</h3>
-          <p>Соседям на радость!</p>
-          <a href="#"><img src="img/icon-left.svg" alt=""></a>
-          <a href="#"><img src="img/icon-right.svg" alt=""></a>
-          <button>Открыть каталог</button>
+        <figure class="sliders">
+          <figcaption>
+            <h3>Дрели</h3>
+            <p>Соседям на радость!</p>
+          </figcaption>
+          <img src="img/photo_slider.png" height="266"  width="620" alt="картинка слайдов">
+          <button><img src="img/icon-left.svg" alt=""></button>
+          <button><img src="img/icon-right.svg" alt=""></button>
+          <a href="#">Открыть каталог</a>
+        </figure>
       </div>
       <div class="item-menu">
-        <p>Материалы</p>
-        <button>на любой вкус</button>
+        <p>Скидки 50%</p>
+        <a href="#">На 350 товаров</a>
         <img src="img/icon-4.svg" alt="скидки">
-        <p>new</p>
       </div>
       <div class="item-menu">
-        <p>Материалы</p>
-        <button>на любой вкус</button>
+        <p>Доставка</p>
+        <a href="#">Бесплатно</a>
         <img src="img/icon-5.svg" alt="доставка">
-        <p>new</p>
       </div>
     </section>
     <section class="popular-block">
       <div>
         <h3>Популярные товары:</h3>
-        <button>Все популярные товары</button>
+        <a href="#">Все популярные товары</a>
         <div class="items-popular">
             <div class="item-popular">
               <img src="img/Perforator_1.png" alt="перфоратор">
@@ -139,7 +139,7 @@
     <section class="popular-producent-block">
       <div>
         <h3>Популярные Производители:</h3>
-        <button>Все производители</button>
+        <a href="#">Все производители</a>
       </div>
       <div class="items-popular-producent">
         <img src="img/bosch.png" alt="логотип">
@@ -174,8 +174,8 @@
         <img src="img/delivery_photo.png" width="468" height="261" alt="доставка">
       </div>
     </section>
-      <section class="contacts-block">
-        <div>
+    <section class="contacts-block">
+    <div>
           <h3>
             КОМПАНИЯ «Техномарт» Настоящий мужской шоппинг начинается здесь
           </h3>
@@ -202,27 +202,18 @@
                 <iframe
                   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d79992.83383804075!2d16.09029030312418!3d51.20477800142894!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x470f1285124037c1%3A0x438e15212088e6a2!2z0JvQtdCz0L3QuNGG0LA!5e0!3m2!1sru!2spl!4v1581156376190!5m2!1sru!2spl"
                   width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
-                <div>x</div>
-              </section>
-          <button>Заблудились?Напишите нам!</button>
-            <div class="modal">
-              <label>Ваше имя:</label>
-              <input type="text" aria-label="ваше имя">
-              <label>Ваш e-mail:</label>
-              <input type="email" aria-label="ваша электронная почта">
-              <label>Текст письма:</label>
-              <textarea id="form-coments" name="comments" id="" cols="30" rows="10" placeholder="В свободной форме"></textarea>
-              <button>Отправить</button>
-              <div>x</div>
-            </div>
-        </div>
-      </section>
+                <button class="modal-close" type="button">Закрыть</button>
+              </div>
+              <button>Заблудились?Напишите нам!</button>
+            </section>
+          </div>
+        </section>
       </main>
     <footer>
       <section class="footer-top">
         <a class="footer-logo" href="index.html"><img src="img/ТЕХНОМАРТ_footer.png" width="220" height="68"
-            alt="логотип Техномарт" /></a>
-        <ul>
+          alt="логотип Техномарт" /></a>
+          <ul>
           <li>
             <a class="icon-bookmarks" href="#">Компания</a>
           </li>
@@ -270,5 +261,26 @@
         <p>Разработано — <span>htmlacademy.ru</span></p>
       </section>
     </footer>
+    <!-- попап карты -->
+    <div class="popup-maps-wrapper">
+      <button class="modal-close" type="button">Закрыть</button>
+      <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d79992.83383804075!2d16.09029030312418!3d51.20477800142894!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x470f1285124037c1%3A0x438e15212088e6a2!2z0JvQtdCz0L3QuNGG0LA!5e0!3m2!1sru!2spl!4v1581156376190!5m2!1sru!2spl"
+                  width="940" height="446" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+    </div>
+    <!-- Форма -->
+    <div class="modal-wrapper">
+      <button class="modal-close" type="button">Закрыть</button>
+      <form class="modal-popup" action="" method="post">
+        <label>Ваше имя:</label>
+        <input type="text" aria-label="ваше имя" placeholder="Имя Фамилия">
+        <label>Ваш e-mail:</label>
+        <input type="email" aria-label="ваша электронная почта" placeholder="email@example.com">
+        <label>Текст письма:</label>
+        <textarea id="form-coments" name="comments" cols="30" rows="10" placeholder="В свободной форме" placeholder="В свободной форме"></textarea>
+        <button class="button" type="submit">Отправить</button>
+      </form>
+    </div>
   </body>
-</html>
+  </html>
+  
