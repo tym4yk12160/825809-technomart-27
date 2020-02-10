@@ -85,7 +85,7 @@
     </header>
     <!-- Содержимое -->
     <main class="container">
-      <div class="wrapper">
+      < class="wrapper">
         <div class="breadcrums-container">
           <img src="img/icon-home.svg" alt="Дом" />
           <a href="index.html">Каталог</a>
@@ -94,42 +94,65 @@
         </div>
         <h1>Перфораторы</h1>
         <!-- Фильтры -->
-        <aside>
-          <p>Фильтр:</p>
-          <!-- Цена -->
-          <div class="cost-block">
-            <h4>ЦЕНА:</h4>
-            <div>
-              <input type="range" min="0" max="30000" />
+        <section class="filters">
+          <h2 class="visually-hidden">Фильтр товаров</h2>
+          <form class="form-filters" action="" method="get">
+            <p>Фильтр:</p>
+            <!-- Цена -->
+            <fieldset class="cost-block">
+              <legend>ЦЕНА:</legend>
               <div>
-                <input type="number" placeholder="0" />
-                <span>-</span>
-                <input type="number" placeholder="30000" />
+                <input type="range" min="0" max="30000" />
+                <div>
+                  <input type="number" placeholder="0" />
+                  <span>-</span>
+                  <input type="number" placeholder="30000" />
+                </div>
               </div>
-            </div>
-          </div>
-          <!-- Марка -->
-          <div class="producent-input-check">
-            <input id="drill-bosch" type="checkbox" checked />
-            <label for="drill-bosch">BOSCH</label>
-            <input id="drill-interscol" type="checkbox" />
-            <label for="drill-interscol">INTERSCOL</label>
-            <input id="drill-makita" type="checkbox" checked />
-            <label for="drill-makita">MAKITA</label>
-            <input id="drill-dewalt" type="checkbox" />
-            <label for="drill-dewalt">DEWALT</label>
-            <input id="drill-hitachi" type="checkbox" />
-            <label for="drill-hitachi">HITACHI</label>
-          </div>
-          <!-- Питание -->
-          <div class="charge-block">
-            <input id="charge-acu" type="radio" name="acu" checked />
-            <label for="charge-acu">Аккумуляторные</label>
-            <input id="charge-cable" type="radio" name="acu" />
-            <label for="charge-cable">Сетевые</label>
-          </div>
-          <button>Показать</button>
-        </aside>
+            </fieldset>
+            <!-- Марка -->
+            <fieldset class="producent-input-check">
+              <legend>Производители:</legend>
+              <ul>
+                <li class="filter-option">
+                  <input id="drill-bosch" type="checkbox" checked />
+                  <label for="drill-bosch">BOSCH</label>
+                </li>
+                <li class="filter-option">
+                  <input id="drill-interscol" type="checkbox" />
+                  <label for="drill-interscol">INTERSCOL</label>
+                </li>
+                <li class="filter-option">
+                  <input id="drill-makita" type="checkbox" checked />
+                  <label for="drill-makita">MAKITA</label>
+                </li>
+                <li class="filter-option">
+                  <input id="drill-dewalt" type="checkbox" />
+                  <label for="drill-dewalt">DEWALT</label>
+                </li>
+                <li class="filter-option">
+                  <input id="drill-hitachi" type="checkbox" />
+                  <label for="drill-hitachi">HITACHI</label>
+                </li>
+            </ul>
+            </fieldset>
+            <!-- Питание -->
+            <fieldset class="charge-block">
+              <legend>Питание:</legend>
+              <ul>
+                <li class="filter-radio">
+                  <input id="charge-acu" type="radio" name="acu" checked />
+                  <label for="charge-acu">Аккумуляторные</label>
+                </li>
+                <li class="filter-radio">
+                  <input id="charge-cable" type="radio" name="acu" />
+                  <label for="charge-cable">Сетевые</label>
+                </li>
+              </ul>
+            </fieldset>
+            <button type="button">Показать</button>
+          </form>
+        </section>
 
         <!-- "Список товаров" -->
         <div class="items">
@@ -140,17 +163,6 @@
             <a href="#">ПО ФУНКЦИОНАЛУ</a>
             <a href="#">▲</a>
             <a href="#">▼</a>
-          </div>
-          <!-- Форма -->
-          <div class="modal-basket">
-            <p>
-              <img src="img/icon-mark.svg" alt="" />Товар добавлен в корзину!
-            </p>
-            <div>
-              <button>Оформить заказ</button>
-              <button>Продолжить покупки</button>
-            </div>
-            <div>x</div>
           </div>
           <!-- Каталог -->
           <!-- Первый ряд -->
@@ -325,25 +337,27 @@
       <section class="social-block">
         <p>© 2010–2019 Компания «Техномарт» Все права защищены</p>
         <div class="social-btn">
-          <ul>
-            <li>
-              <a href="#"
-                ><img src="img/icon-vk.svg" alt="иконка Вконтакте"
-              /></a>
-            </li>
-            <li>
-              <a href="#"><img src="img/icon-fb.svg" alt="иконка Фейсбук"/></a>
-            </li>
-            <li>
-              <a href="#"
-                ><img src="img/icon-insta.svg" alt="иконка Инстаграмм"
-              /></a>
-            </li>
-          </ul>
+          <a href="https://vk.com/htmlacademy" class="social-btn vk-btn">
+          <img src="img/icon-vk.svg" alt="Социальная сеть Вконтакте"></a>
+          <a href="https://www.facebook.com/htmlacademy" class="social-btn fb-btn">
+          <img src="img/icon-fb.svg" alt="Социальная сеть Фейсбук"></a>
+          <a href="https://www.instagram.com/htmlacademy/" class="social-btn it-btn">
+          <img src="img/icon-insta.svg" alt="Социальная сеть Инстаграмм"></a>
         </div>
-        <p>Обратная связь: <span>mail@htmlacademy.ru</span></p>
-        <p>Разработано — <span>htmlacademy.ru</span></p>
+        <p>Обратная связь: <a href="#">mail@htmlacademy.ru</a></p>
+        <p>Разработано — <a href="https://htmlacademy.ru/">htmlacademy.ru</a></p>
       </section>
     </footer>
+    <!-- Форма -->
+    <div class="basket-wrapper">
+      <div class="modal-basket">
+        <p><img src="img/icon-mark.svg" alt="" />Товар добавлен в корзину!</p>
+        <div>
+          <a href="#">Оформить заказ</a>
+          <a href="#">Продолжить покупки</a>
+        </div>
+        <button class="modal-close" type="button">Закрыть</button>
+      </div>
+    </div>
   </body>
 </html>
