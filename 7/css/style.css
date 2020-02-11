@@ -1,0 +1,250 @@
+body {
+  background-color: #fff;
+  font-family: 'Cuprum', sans-serif;
+}
+a,
+ul {
+  text-decoration: none;
+  list-style: none;
+}
+/* header */
+.header {
+  background-color: #f1f5f7;
+}
+.header-logo img:hover {
+  -webkit-filter: brightness(0.8);
+          filter: brightness(0.8);
+}
+.header-logo img:hover:active {
+  -webkit-filter: brightness(0.65);
+          filter: brightness(0.65);
+}
+.header-top,
+.header-nav {
+  background-color: #293449;
+}
+.header-top li a,
+.header-nav li a,
+.header-top .search-block span,
+.header-nav .search-block span {
+  color: #ffffff;
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 18px;
+}
+.header-top .search-block input:focus img,
+.header-nav .search-block input:focus img {
+  -webkit-filter: opacity(0.5);
+          filter: opacity(0.5);
+}
+.header-top .icon,
+.header-nav .icon {
+  -webkit-filter: opacity(0.3);
+          filter: opacity(0.3);
+}
+.header-top .button-place,
+.header-nav .button-place {
+  background-color: #63a63e;
+}
+.header-top .button-place:hover,
+.header-nav .button-place:hover {
+  background-color: #5fbb2d;
+}
+.header-top .button-place:active,
+.header-nav .button-place:active {
+  background-color: #518534;
+}
+.header-top li:hover,
+.header-nav li:hover,
+.header-top .search-block:hover,
+.header-nav .search-block:hover {
+  background-color: #212a3a;
+}
+.header-top li:hover .icon,
+.header-nav li:hover .icon,
+.header-top .search-block:hover .icon,
+.header-nav .search-block:hover .icon {
+  -webkit-filter: opacity(1);
+          filter: opacity(1);
+}
+.header-top li:hover:active img,
+.header-nav li:hover:active img,
+.header-top .search-block:hover:active img,
+.header-nav .search-block:hover:active img {
+  -webkit-filter: opacity(0.3);
+          filter: opacity(0.3);
+}
+.header-top li:hover:active:not(.search-block),
+.header-nav li:hover:active:not(.search-block),
+.header-top .search-block:hover:active:not(.search-block),
+.header-nav .search-block:hover:active:not(.search-block) {
+  background-color: #161d29;
+}
+.header .header-contacts > p {
+  color: #ee3643;
+  font-size: 16px;
+  font-style: italic;
+  line-height: 23px;
+}
+.header .header-call a {
+  font-size: 21px;
+  font-weight: 400;
+  line-height: 21px;
+}
+.header .header-call div {
+  position: relative;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 270px;
+  text-align: center;
+  height: 45px;
+  border: 2px solid #fff;
+}
+.header .header-call a {
+  vertical-align: middle;
+  line-height: 45px;
+  color: #ee3643;
+}
+.header .header-call img {
+  position: absolute;
+  top: 11px;
+  left: 15px;
+}
+.header .header-call .adress {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 24px;
+}
+.header .container-user .btn {
+  font-size: 21px;
+  font-weight: 400;
+  line-height: 21px;
+  color: #000000;
+  background-color: #ffffff;
+  display: inline-block;
+  line-height: 45px;
+  text-align: center;
+  height: 45px;
+  position: relative;
+}
+.header .container-user .btn:hover {
+  color: #ee3643;
+}
+.header .container-user .btn:active {
+  color: #c5c5c5;
+}
+.header .container-user .btn-reg {
+  width: 150px;
+}
+.header .container-user .btn-login {
+  width: 121px;
+  padding-left: 10px;
+}
+.header .container-user .btn-login::before {
+  content: "";
+  background-image: url('../img/icon-login.svg');
+  background-size: 20px 17px;
+  width: 20px;
+  height: 17px;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 14px;
+  left: 14px;
+}
+/* icons checkbox */
+.producent-input-check {
+  display: inline-block;
+  vertical-align: top;
+  position: relative;
+  cursor: pointer;
+}
+.producent-input-check input {
+  width: 27px;
+  height: 23px;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  margin-top: -7px;
+  cursor: pointer;
+  z-index: 10;
+  opacity: 0;
+}
+.producent-input-check label {
+  font-size: 14px;
+  line-height: 22px;
+  display: block;
+  padding-left: 30px;
+  position: relative;
+  z-index: 1;
+  cursor: pointer;
+}
+.producent-input-check label:before {
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 27px;
+  height: 23px;
+  margin-top: -10px;
+  background: url("../img/checkbox-off.svg") no-repeat;
+  content: "";
+}
+.producent-input-check input:checked + label:before {
+  background: url("../img/checkbox-on.svg");
+}
+/* Значки радио */
+.charge-block {
+  display: inline-block;
+  vertical-align: top;
+  position: relative;
+  cursor: pointer;
+}
+.charge-block input {
+  width: 27px;
+  height: 23px;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  margin-top: -7px;
+  cursor: pointer;
+  z-index: 10;
+  opacity: 0;
+}
+.charge-block label {
+  font-size: 14px;
+  line-height: 22px;
+  display: block;
+  padding-left: 30px;
+  position: relative;
+  z-index: 1;
+  cursor: pointer;
+}
+.charge-block label:before {
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 25px;
+  height: 25px;
+  margin-top: -10px;
+  background: url("../img/radio-off.svg") no-repeat;
+  content: "";
+}
+.charge-block input:checked + label:before {
+  background: url("../img/radio-on.svg") no-repeat;
+}
+.item a:not(.button-item) {
+  display: block;
+  width: 141px;
+  height: 38px;
+  color: white;
+  text-decoration: none;
+  text-align: center;
+  line-height: 38px;
+  vertical-align: middle;
+  /* background  : url("../img/red-button.svg") no-repeat; */
+}
