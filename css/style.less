@@ -1,0 +1,278 @@
+body {
+    background-color: #fff;
+    font-family     : 'Cuprum', sans-serif;
+}
+
+a,
+ul {
+    text-decoration: none;
+    list-style     : none;
+}
+
+
+;
+
+/* header */
+.header {
+    background-color: #f1f5f7;
+
+    &-logo img:hover {
+        filter: brightness(0.8);
+
+        &:active {
+            filter: brightness(0.65);
+        }
+    }
+
+    &-top,
+    &-nav {
+        background-color: #293449;
+
+        li a,
+        .search-block span {
+            color      : #ffffff;
+            font-size  : 17px;
+            font-weight: 400;
+            line-height: 18px;
+        }
+
+        .search-block input:focus img {
+            filter: opacity(0.5);
+        }
+
+        .icon {
+            filter: opacity(0.3);
+        }
+
+        .button-place {
+            background-color: #63a63e;
+
+            &:hover {
+                background-color: #5fbb2d;
+            }
+
+            &:active {
+                background-color: #518534;
+            }
+        }
+
+        li:hover,
+        .search-block:hover {
+            background-color: #212a3a;
+
+            .icon {
+
+                filter: opacity(1);
+            }
+
+            &:active {
+                img {
+                    filter: opacity(0.3);
+                }
+
+                &:not(.search-block) {
+                    background-color: #161d29;
+                }
+            }
+        }
+    }
+
+    .header-contacts>p {
+        color      : #ee3643;
+        font-size  : 16px;
+        font-style : italic;
+        line-height: 23px;
+    }
+
+    .header-call {
+        a {
+            font-size  : 21px;
+            font-weight: 400;
+            line-height: 21px;
+        }
+
+        div {
+            position  : relative;
+            box-sizing: border-box;
+            width     : 270px;
+            text-align: center;
+            height    : 45px;
+            border    : 2px solid #fff;
+
+        }
+
+        a {
+            vertical-align: middle;
+            line-height   : 45px;
+            color         : #ee3643;
+        }
+
+        img {
+            position: absolute;
+            top     : 11px;
+            left    : 15px;
+        }
+
+        .adress {
+            font-size  : 14px;
+            font-weight: 400;
+            line-height: 24px;
+        }
+    }
+
+    .container-user {
+        .btn {
+            font-size       : 21px;
+            font-weight     : 400;
+            line-height     : 21px;
+            color           : #000000;
+            background-color: #ffffff;
+            display         : inline-block;
+            line-height     : 45px;
+            text-align      : center;
+            height          : 45px;
+            position        : relative;
+
+            &:hover {
+                color: #ee3643;
+            }
+
+            &:active {
+                color: #c5c5c5;
+            }
+        }
+
+        .btn-reg {
+            width: 150px;
+        }
+
+        .btn-login {
+            width       : 121px;
+            padding-left: 10px;
+
+            &::before {
+                content          : "";
+                background-image : url('../img/icon-login.svg');
+                background-size  : 20px 17px;
+                width            : 20px;
+                height           : 17px;
+                background-repeat: no-repeat;
+                position         : absolute;
+                top              : 14px;
+                left             : 14px;
+
+            }
+
+        }
+    }
+}
+
+
+
+/* icons checkbox */
+.producent-input-check {
+    display       : inline-block;
+    vertical-align: top;
+    position      : relative;
+    cursor        : pointer;
+
+    & input {
+        width     : 27px;
+        height    : 23px;
+        margin    : 0;
+        padding   : 0;
+        position  : absolute;
+        left      : 0;
+        top       : 50%;
+        margin-top: -7px;
+        cursor    : pointer;
+        z-index   : 10;
+        opacity   : 0;
+    }
+
+    & label {
+        font-size   : 14px;
+        line-height : 22px;
+        display     : block;
+        padding-left: 30px;
+        position    : relative;
+        z-index     : 1;
+        cursor      : pointer;
+    }
+
+    & label:before {
+        display   : block;
+        position  : absolute;
+        left      : 0;
+        top       : 50%;
+        width     : 27px;
+        height    : 23px;
+        margin-top: -10px;
+        background: url("../img/checkbox-off.svg") no-repeat;
+        content   : "";
+    }
+
+    & input:checked+label:before {
+        background: url("../img/checkbox-on.svg");
+    }
+}
+
+/* Значки радио */
+.charge-block {
+    display       : inline-block;
+    vertical-align: top;
+    position      : relative;
+    cursor        : pointer;
+
+    & input {
+        width     : 27px;
+        height    : 23px;
+        margin    : 0;
+        padding   : 0;
+        position  : absolute;
+        left      : 0;
+        top       : 50%;
+        margin-top: -7px;
+        cursor    : pointer;
+        z-index   : 10;
+        opacity   : 0;
+    }
+
+    & label {
+        font-size   : 14px;
+        line-height : 22px;
+        display     : block;
+        padding-left: 30px;
+        position    : relative;
+        z-index     : 1;
+        cursor      : pointer;
+    }
+
+    & label:before {
+        display   : block;
+        position  : absolute;
+        left      : 0;
+        top       : 50%;
+        width     : 25px;
+        height    : 25px;
+        margin-top: -10px;
+        background: url("../img/radio-off.svg") no-repeat;
+        content   : "";
+    }
+
+    & input:checked+label:before {
+        background: url("../img/radio-on.svg") no-repeat;
+    }
+}
+
+.item a:not(.button-item) {
+    display        : block;
+    width          : 141px;
+    height         : 38px;
+    color          : white;
+    text-decoration: none;
+    text-align     : center;
+    line-height    : 38px;
+    vertical-align : middle;
+    /* background  : url("../img/red-button.svg") no-repeat; */
+}

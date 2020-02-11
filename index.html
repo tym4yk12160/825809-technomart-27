@@ -3,33 +3,36 @@
   <head>
     <meta charset="utf-8" />
     <title>HTML Academy: Техномарт</title>
+    <link rel="stylesheet" href="css/fonts.css">
+    <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
-    <header class="main-header">
+    <header class="header">
       <section class="header-top">
         <a class="header-logo" href="index.html"
           ><img src="img/ТЕХНОМАРТ.png" width="220" height="47" alt="логотип Техномарт"
         /></a>
-        <div class="icon-search">
-          <img src="img/icon-search.svg" alt="">
+        <div class="search-block">
+          <img class="icon icon-search" src="img/icon-search.svg" alt="">
+          <span class="search-text">Поиск:</span>
           <input type="search" placeholder="Поиск:" />
         </div>
-        <ul>
+        <ul class="header-shoping">
           <li>
-            <img src="img/icon-bookmark.svg" alt="">
-            <a class="icon-bookmarks" href="#"
+            <img class="icon icon-bookmarks" src="img/icon-bookmark.svg" alt="">
+            <a href="#"
               >Закладки: <span class="bookmarks-score">0</span></a
             >
           </li>
           <li>
-            <img src="img/icon-cart.svg" alt="">
-            <a class="icon-basket" href="#"
+            <img class="icon icon-basket" src="img/icon-cart.svg" alt="">
+            <a href="#"
               >Корзина: <span class="basket-score">0</span></a
             >
           </li>
           <li>
-            <button class="button button-place">Оформить заказ</button>
+            <a href="#" class="button button-place">Оформить заказ</a>
           </li>
         </ul>
       </section>
@@ -38,19 +41,20 @@
           Интернет-магазин строительных материалов и инструментов для ремонта
         </p>
         <div class="header-call">
-          <button>
-            <img src="img/icon-phone.svg" alt="иконка телефона">
-            +7 (812) 555-05-55 </button>
-          <p class="adress"
-            >г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
+          <div>
+            <a href="#">
+              <img src="img/icon-phone.svg" alt="иконка телефона">
+              +7 (812) 555-05-55 </a>
+          </div>
+          <p class="adress">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
         </div>
         <div class="container-user">
-          <button class="btn btn-login">Войти</button>
-          <button class="btn btn-reg">Регистрация</button>
+          <a href="#" class="btn btn-login">Войти</a>
+          <a href="#" class="btn btn-reg">Регистрация</a>
         </div>
       </section>
       <!-- Навигация -->
-      <nav class="index-nav">
+      <nav class="header-nav">
         <ul class="site-navigation">
           <li><a href="index.html">Главная</a></li>
           <li><a href="index.html">Компания</a></li>
@@ -191,20 +195,20 @@
               <li>ЖелДорЭкспедиция</li>
             </ul>
           </p>
-          <a href="#">Подробнее о компании</a>
+          <a class="btn" href="#">Подробнее о компании</a>
         </div>
         <div class="maps">
           <h3>КОНТАКТЫ</h3>
           <p>Вы можете забрать товар сами, заехав в наш офис:</p>
-           <a href="url_maps"><img src="img/small_map.png"
+           <a href="url_maps"><img class="maps-img" src="img/small_map.png"
               width="300" height="158" alt="маленькая картинка карты"></a>
               <section class="maps_url">
                 <iframe
                   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d79992.83383804075!2d16.09029030312418!3d51.20477800142894!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x470f1285124037c1%3A0x438e15212088e6a2!2z0JvQtdCz0L3QuNGG0LA!5e0!3m2!1sru!2spl!4v1581156376190!5m2!1sru!2spl"
                   width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
                 <button class="modal-close" type="button">Закрыть</button>
+                <a class="btn" href="#">Заблудились?Напишите нам!</a>
               </div>
-              <button>Заблудились?Напишите нам!</button>
             </section>
           </div>
         </section>
@@ -233,7 +237,9 @@
       </section>
       <section class="footer-menu">
         <p>
-          Интернет-магазин строительных материалов и инструментов для ремонта
+          г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8
++7 (812) 555-05-55
+
         </p>
         <ul>
           <li>
