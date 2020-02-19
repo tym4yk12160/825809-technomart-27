@@ -1,0 +1,675 @@
+body {
+    background-color: #fff;
+    font-family: "Cuprum", sans-serif;
+    width: 1920px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.wrapper-first {
+    width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: -23px;
+    border-top: 23px solid #293449;
+}
+
+img {
+    max-width: 100%;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none outside;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+/* header */
+.header {
+    display: flex;
+    width: 940px;
+    flex-wrap: wrap;
+    border: 2px solid green;
+
+    &-top ul {
+        display: flex;
+        border: 2px dashed red;
+
+        li {
+            border: 2px solid blue;
+        }
+    }
+
+
+    &-logo {
+        width: 220px;
+        height: 47px;
+    }
+
+    &-logo img:hover {
+        filter: brightness(0.7);
+
+        &:active {
+            filter: brightness(0.5);
+        }
+    }
+
+    &-top,
+    &-nav {
+        background-color: #293449;
+        width: 100%;
+
+        ul {
+            margin: 0;
+            padding: 0;
+        }
+
+        li {
+            height: 42px;
+            text-align: center;
+            line-height: 42px;
+            vertical-align: middle;
+
+            &:hover {
+                background-color: #212a3a;
+            }
+
+            &:active:not(.search-text) {
+                background-color: #161d29;
+            }
+        }
+
+        li a {
+            display: block;
+            color: #ffffff;
+            vertical-align: middle;
+            font-size: 17px;
+            font-weight: 400;
+            line-height: 42px;
+        }
+
+        /* стили поиска, не мегу пока доделать */
+        .search-text {
+            width: 270px;
+            height: 42px;
+
+            input {
+                display: none;
+            }
+
+            a {
+                position: relative;
+                text-align: left;
+                padding-left: 50px;
+
+                span {
+                    display: none;
+                }
+            }
+
+            a:focus {
+                height: 42px;
+                background-color: #fff;
+
+                span {
+                    display: block;
+                    color: black;
+                    position: absolute;
+                    left: 50px;
+                    top: 0px;
+                }
+            }
+
+            a::before {
+                content: "";
+                background-image: url("../img/icon-search.svg");
+                background-size: 17px 17px;
+                width: 17px;
+                height: 17px;
+                position: absolute;
+                left: 17px;
+                top: 10px;
+                filter: opacity(0.3);
+            }
+
+            a:hover:before {
+                filter: none;
+            }
+
+            a:focus:before {
+                filter: contrast(0%) sepia(100%) hue-rotate(-40deg) saturate(500%);
+                left: 14px;
+            }
+        }
+
+        .icon-bookmarks,
+        .icon-basket {
+            position: relative;
+            width: 150px;
+
+            &::before {
+                content: "";
+                background: url("../img/icon-bookmark.svg") no-repeat;
+                background-size: 15px 15px;
+                width: 15px;
+                height: 15px;
+                position: absolute;
+                top: 13px;
+                left: 0;
+                filter: opacity(0.3);
+            }
+
+            &:hover:before {
+                filter: none;
+            }
+
+            &:active:before {
+                filter: opacity(0.5);
+            }
+        }
+
+        .icon-basket::before {
+            background-image: url("../img/icon-cart.svg");
+        }
+
+        .button-place {
+            width: 149px;
+            background-color: #63a63e;
+
+            &:hover {
+                background-color: #5fbb2d;
+            }
+
+            &:active a {
+                height: 100%;
+                background-color: #518534;
+            }
+        }
+    }
+
+    /* Обратная связь */
+    .feedback {
+        display: flex;
+        border: 2px solid yellow;
+        color: #ee3643;
+
+        li {
+            &:not(:last-child) {
+                // margin-right: 70px;
+            }
+        }
+
+        p:first-child {
+            color: inherit;
+            font-size: 16px;
+            font-style: italic;
+            line-height: 23px;
+        }
+
+        .call {
+            display: inline-block;
+            color: inherit;
+            font-size: 21px;
+            font-weight: 400;
+            line-height: 21px;
+            width: 270px;
+            height: 45px;
+            border: 3px solid white;
+            position: relative;
+            text-align: center;
+            line-height: 45px;
+            vertical-align: middle;
+
+            &::before {
+                content: "";
+                background-image: url("../img/icon-phone.svg");
+                background-size: 19px 19px;
+                width: 19px;
+                height: 19px;
+                background-repeat: no-repeat;
+                position: absolute;
+                top: 10px;
+                left: 10px;
+            }
+        }
+
+        .adress {
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 24px;
+            color: #32425c;
+        }
+
+        .btn {
+            font-size: 21px;
+            font-weight: 400;
+            line-height: 21px;
+            color: #000000;
+            background-color: #ffffff;
+            display: inline-block;
+            line-height: 45px;
+            text-align: center;
+            height: 45px;
+            position: relative;
+
+            &:hover {
+                color: #ee3643;
+            }
+
+            &:active {
+                color: rgba(0, 0, 0, 0.3);
+            }
+        }
+
+        .btn-reg {
+            width: 150px;
+        }
+
+        .btn-login {
+            width: 121px;
+            padding-left: 10px;
+            margin-right: 8px;
+
+            &::before {
+                content: url("../img/icon-login.svg");
+                position: absolute;
+                left: 14px;
+                top: 2px;
+            }
+
+            &:hover:before {
+                filter: contrast(0%) sepia(25%) hue-rotate(190deg) brightness(0.8) saturate(500%);
+            }
+
+            &:active:before {
+                filter: none;
+            }
+        }
+
+        /* Стили для catalog.html > .user */
+        .user-list {
+            .user {
+                font-style: normal;
+                position: relative;
+                color: #000;
+                background-color: #fff;
+                width: 293px;
+                height: 45px;
+                text-align: center;
+                vertical-align: middle;
+                line-height: 45px;
+                font-size: 21px;
+
+                &:active {
+                    color: rgba(0, 0, 0, 0.3);
+                }
+
+                &::before,
+                &::after {
+                    content: url("../img/icon-user.svg");
+                    width: 20px;
+                    height: 18px;
+                    background-repeat: no-repeat;
+                    position: absolute;
+                    top: 4px;
+                    left: 13px;
+                }
+
+                &::after {
+                    content: url("../img/icon-logout.svg");
+                    left: 265px;
+                }
+
+                &:hover:before {
+                    content: url("../img/icon-user_hover.svg");
+                }
+
+                &:hover:after {
+                    content: url("../img/icon-logout_hover.svg");
+                }
+            }
+
+            /* стили и псевдоиконки для пользователя */
+
+            .user-navigation {
+                margin-left: 10px;
+
+                span {
+                    color: #32425c;
+                }
+
+                a {
+                    margin: 0px 10px;
+                    color: #32425c;
+                    text-decoration: underline;
+
+                    &:hover {
+                        color: #ee3643;
+                    }
+
+                    &:active {
+                        color: rgba(50, 66, 92, 0.3);
+                    }
+                }
+            }
+        }
+    }
+
+    .header-nav {
+        background-color: #32425c;
+        height: 60px;
+        border-bottom: 2px solid #293449;
+
+        li {
+            height: 60px;
+            width: 134px;
+
+            a {
+                line-height: 60px;
+                vertical-align: middle;
+
+                &:active {
+                    opacity: 0.5;
+                }
+            }
+        }
+    }
+}
+
+/* Хлебные крохи catalog.html */
+.breadcrums-container {
+    height: 60px;
+    vertical-align: middle;
+    line-height: 60px;
+
+    li {
+        &:first-child {}
+
+        &:not(:last-child) {
+            margin-right: 15px;
+
+            &::after {
+                content: url(../img/icon-right-small.svg);
+                margin-left: 15px;
+            }
+        }
+    }
+
+    a {
+        height: 9px;
+        color: #000000;
+        font-family: "PTSans";
+        font-size: 13px;
+        font-weight: 400;
+        line-height: 18px;
+        text-transform: uppercase;
+    }
+}
+
+/* footer */
+footer {
+    position: relative;
+    width: 940px;
+    margin-left: auto;
+    margin-right: auto;
+
+    color: #f1f5f7;
+    font-family: "Cuprum";
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 24px;
+
+    &>div {
+        width: 1200px;
+        background-color: #32425c;
+        position: absolute;
+        z-index: -1;
+        height: 300px;
+        margin-left: -130px;
+
+    }
+
+    a {
+        color: #f1f5f7;
+    }
+
+
+
+    .footer-top ul {
+        height: 62px;
+        margin-bottom: 30px;
+
+        li:not(:first-child) {
+            margin-left: 60px;
+        }
+
+        li>a>img {
+            margin-right: 50px;
+
+        }
+
+        li:not(:first-child) a {
+            line-height: 62px;
+            vertical-align: bottom;
+        }
+    }
+
+    .footer-menu ul {
+        margin: 0;
+        padding: 0;
+        height: 62px;
+        line-height: 62px;
+
+        margin-bottom: 50px;
+
+        li {
+            vertical-align: top;
+            line-height: 24px;
+
+            p {
+                margin: 0 90px 0 0;
+            }
+
+            & a {
+                color: #ffd180;
+            }
+
+            &:not(:last-child) a {
+                margin-right: 50px;
+            }
+
+        }
+    }
+
+    .social-block {
+        height: 107px;
+        margin: 0;
+        padding: 0;
+
+        &>div {
+            width: 1200px;
+            height: 107px;
+            background-color: #293449;
+            margin-left: -130px;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            z-index: -1;
+        }
+
+        ul {
+            line-height: 125px;
+            vertical-align: middle;
+
+            li,
+            div {
+                display: inline-block;
+                font-family: "Cuprum";
+                font-size: 16px;
+                font-weight: 400;
+                line-height: 18px;
+            }
+
+            div {
+                margin: 0 120px 0 140px;
+
+                a {
+                    margin: 0;
+                    padding: 0;
+                    display: inline-block;
+                    width: 42px;
+                    height: 42px;
+                    border-radius: 50%;
+                    background: url('../img/icon-vk.svg') no-repeat 50% 50%;
+                    background-color: #212a3a;
+
+                    &:not(:last-child) {
+                        margin-right: 4px;
+                    }
+
+                    &+a {
+                        background: url('../img/icon-fb.svg') no-repeat 50% 50%;
+                        background-color: #212a3a;
+
+                        &+a {
+                            background: url('../img/icon-insta.svg') no-repeat 50% 50%;
+                            background-color: #212a3a;
+
+
+                        }
+                    }
+                }
+            }
+
+            li:last-child {
+                margin-left: 50px;
+            }
+        }
+    }
+}
+
+/* icons checkbox */
+.producent-input-check {
+    display: inline-block;
+    vertical-align: top;
+    position: relative;
+    cursor: pointer;
+
+    & input {
+        width: 27px;
+        height: 23px;
+        margin: 0;
+        padding: 0;
+        position: absolute;
+        left: 0;
+        top: 50%;
+        margin-top: -7px;
+        cursor: pointer;
+        z-index: 10;
+        opacity: 0;
+    }
+
+    & label {
+        font-size: 14px;
+        line-height: 22px;
+        display: block;
+        padding-left: 30px;
+        position: relative;
+        z-index: 1;
+        cursor: pointer;
+    }
+
+    & label:before {
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 50%;
+        width: 27px;
+        height: 23px;
+        margin-top: -10px;
+        background: url("../img/checkbox-off.svg") no-repeat;
+        content: "";
+    }
+
+    & input:checked+label:before {
+        background: url("../img/checkbox-on.svg");
+    }
+}
+
+/* Значки радио */
+.charge-block {
+    display: inline-block;
+    vertical-align: top;
+    position: relative;
+    cursor: pointer;
+
+    & input {
+        width: 27px;
+        height: 23px;
+        margin: 0;
+        padding: 0;
+        position: absolute;
+        left: 0;
+        top: 50%;
+        margin-top: -7px;
+        cursor: pointer;
+        z-index: 10;
+        opacity: 0;
+    }
+
+    & label {
+        font-size: 14px;
+        line-height: 22px;
+        display: block;
+        padding-left: 30px;
+        position: relative;
+        z-index: 1;
+        cursor: pointer;
+    }
+
+    & label:before {
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 50%;
+        width: 25px;
+        height: 25px;
+        margin-top: -10px;
+        background: url("../img/radio-off.svg") no-repeat;
+        content: "";
+    }
+
+    & input:checked+label:before {
+        background: url("../img/radio-on.svg") no-repeat;
+    }
+}
+
+.item a:not(.button-item) {
+    display: block;
+    width: 141px;
+    height: 38px;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    line-height: 38px;
+    vertical-align: middle;
+    /* background  : url("../img/red-button.svg") no-repeat; */
+}
+
+.popup {
+    display: none;
+}
