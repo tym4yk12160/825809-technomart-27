@@ -1,16 +1,17 @@
 body {
-    margin: 0px 40px;
     background-color: #fff;
     font-family: "Cuprum", sans-serif;
-    width: 1280px;
+    width: 1920px;
     margin-left: auto;
     margin-right: auto;
 }
 
 .wrapper-first {
-    width: 940px;
+    width: 1200px;
     margin-left: auto;
     margin-right: auto;
+    margin-top: -23px;
+    border-top: 23px solid #293449;
 }
 
 img {
@@ -25,14 +26,6 @@ ul {
     list-style: none outside;
     margin: 0;
     padding: 0;
-
-    li {
-        display: inline-block;
-    }
-
-    li:not(:first-child) {
-        margin-left: -4px;
-    }
 }
 
 html {
@@ -47,43 +40,24 @@ html {
 
 /* header */
 .header {
-    &>div {
-        width: 1280px;
-        height: 320px;
-        background-color: #f2f6f8;
-        position: absolute;
-        margin-left: -170px;
-        z-index: -1;
+    display: flex;
+    width: 940px;
+    flex-wrap: wrap;
+    border: 2px solid green;
 
+    &-top ul {
+        display: flex;
+        border: 2px dashed red;
+
+        li {
+            border: 2px solid blue;
+        }
     }
 
-    &-top div {
-        width: 1280px;
-        height: 42px;
-        background-color: #293449;
-        left: 110px;
-        top: 0;
-        position: absolute;
-        z-index: -1;
-    }
-
-    li {}
 
     &-logo {
         width: 220px;
         height: 47px;
-
-        a {
-            // position: relative;
-        }
-
-        img {
-            // position: absolute;
-            // top     : 0;
-            // left    : 0;
-            // width   : 220px;
-            // height  : 47px;
-        }
     }
 
     &-logo img:hover {
@@ -97,7 +71,6 @@ html {
     &-top,
     &-nav {
         background-color: #293449;
-        height: 42px;
         width: 100%;
 
         ul {
@@ -230,11 +203,13 @@ html {
 
     /* Обратная связь */
     .feedback {
+        display: flex;
+        border: 2px solid yellow;
         color: #ee3643;
 
         li {
             &:not(:last-child) {
-                margin-right: 70px;
+                // margin-right: 70px;
             }
         }
 

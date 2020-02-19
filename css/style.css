@@ -1,15 +1,16 @@
 body {
-  margin: 0px 40px;
   background-color: #fff;
   font-family: "Cuprum", sans-serif;
-  width: 1280px;
+  width: 1920px;
   margin-left: auto;
   margin-right: auto;
 }
 .wrapper-first {
-  width: 940px;
+  width: 1200px;
   margin-left: auto;
   margin-right: auto;
+  margin-top: -23px;
+  border-top: 23px solid #293449;
 }
 img {
   max-width: 100%;
@@ -21,12 +22,6 @@ ul {
   list-style: none outside;
   margin: 0;
   padding: 0;
-}
-ul li {
-  display: inline-block;
-}
-ul li:not(:first-child) {
-  margin-left: -4px;
 }
 html {
   -webkit-box-sizing: border-box;
@@ -40,24 +35,23 @@ html {
 }
 /* header */
 .header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 940px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  border: 2px solid green;
   /* Обратная связь */
 }
-.header > div {
-  width: 1280px;
-  height: 320px;
-  background-color: #f2f6f8;
-  position: absolute;
-  margin-left: -170px;
-  z-index: -1;
+.header-top ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border: 2px dashed red;
 }
-.header-top div {
-  width: 1280px;
-  height: 42px;
-  background-color: #293449;
-  left: 110px;
-  top: 0;
-  position: absolute;
-  z-index: -1;
+.header-top ul li {
+  border: 2px solid blue;
 }
 .header-logo {
   width: 220px;
@@ -74,7 +68,6 @@ html {
 .header-top,
 .header-nav {
   background-color: #293449;
-  height: 42px;
   width: 100%;
   /* стили поиска, не мегу пока доделать */
 }
@@ -218,11 +211,12 @@ html {
   background-color: #518534;
 }
 .header .feedback {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border: 2px solid yellow;
   color: #ee3643;
   /* Стили для catalog.html > .user */
-}
-.header .feedback li:not(:last-child) {
-  margin-right: 70px;
 }
 .header .feedback p:first-child {
   color: inherit;
