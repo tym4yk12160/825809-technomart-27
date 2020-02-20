@@ -22,10 +22,21 @@ a {
     text-decoration: none;
 }
 
+p,
+div {
+    margin: 0;
+    padding: 0;
+}
+
 ul {
     list-style: none outside;
     margin: 0;
     padding: 0;
+
+    li {
+        text-align: center;
+        vertical-align: middle;
+    }
 }
 
 html {
@@ -41,17 +52,14 @@ html {
 /* header */
 .header {
     display: flex;
+    flex-direction: column;
     width: 940px;
     flex-wrap: wrap;
-    border: 2px solid green;
+    background-color: #f3f7f8;
 
-    &-top ul {
+    &-top {
         display: flex;
-        border: 2px dashed red;
-
-        li {
-            border: 2px solid blue;
-        }
+        height: 42px;
     }
 
 
@@ -73,13 +81,7 @@ html {
         background-color: #293449;
         width: 100%;
 
-        ul {
-            margin: 0;
-            padding: 0;
-        }
-
-        li {
-            height: 42px;
+        div {
             text-align: center;
             line-height: 42px;
             vertical-align: middle;
@@ -93,19 +95,18 @@ html {
             }
         }
 
-        li a {
+        a {
             display: block;
             color: #ffffff;
             vertical-align: middle;
             font-size: 17px;
             font-weight: 400;
-            line-height: 42px;
         }
+
 
         /* стили поиска, не мегу пока доделать */
         .search-text {
             width: 270px;
-            height: 42px;
 
             input {
                 display: none;
@@ -122,7 +123,6 @@ html {
             }
 
             a:focus {
-                height: 42px;
                 background-color: #fff;
 
                 span {
@@ -187,7 +187,7 @@ html {
         }
 
         .button-place {
-            width: 149px;
+            width: 150px;
             background-color: #63a63e;
 
             &:hover {
@@ -204,200 +204,214 @@ html {
     /* Обратная связь */
     .feedback {
         display: flex;
-        border: 2px solid yellow;
-        color: #ee3643;
+        justify-content: space-between;
+        width: 100%;
+        height: 60px;
+        margin: 45px 0;
 
-        li {
-            &:not(:last-child) {
-                // margin-right: 70px;
-            }
-        }
+        div {
 
-        p:first-child {
-            color: inherit;
-            font-size: 16px;
-            font-style: italic;
-            line-height: 23px;
-        }
-
-        .call {
-            display: inline-block;
-            color: inherit;
-            font-size: 21px;
-            font-weight: 400;
-            line-height: 21px;
-            width: 270px;
-            height: 45px;
-            border: 3px solid white;
-            position: relative;
-            text-align: center;
-            line-height: 45px;
-            vertical-align: middle;
-
-            &::before {
-                content: "";
-                background-image: url("../img/icon-phone.svg");
-                background-size: 19px 19px;
-                width: 19px;
-                height: 19px;
-                background-repeat: no-repeat;
-                position: absolute;
-                top: 10px;
-                left: 10px;
-            }
-        }
-
-        .adress {
-            font-size: 14px;
-            font-weight: 400;
-            line-height: 24px;
-            color: #32425c;
-        }
-
-        .btn {
-            font-size: 21px;
-            font-weight: 400;
-            line-height: 21px;
-            color: #000000;
-            background-color: #ffffff;
-            display: inline-block;
-            line-height: 45px;
-            text-align: center;
-            height: 45px;
-            position: relative;
-
-            &:hover {
+            &:first-child p {
                 color: #ee3643;
+                font-size: 16px;
+                font-style: italic;
+                line-height: 23px;
+                width: 200px;
+                margin-left: 50px;
             }
 
-            &:active {
-                color: rgba(0, 0, 0, 0.3);
-            }
-        }
-
-        .btn-reg {
-            width: 150px;
-        }
-
-        .btn-login {
-            width: 121px;
-            padding-left: 10px;
-            margin-right: 8px;
-
-            &::before {
-                content: url("../img/icon-login.svg");
-                position: absolute;
-                left: 14px;
-                top: 2px;
-            }
-
-            &:hover:before {
-                filter: contrast(0%) sepia(25%) hue-rotate(190deg) brightness(0.8) saturate(500%);
-            }
-
-            &:active:before {
-                filter: none;
-            }
-        }
-
-        /* Стили для catalog.html > .user */
-        .user-list {
-            .user {
-                font-style: normal;
-                position: relative;
-                color: #000;
-                background-color: #fff;
-                width: 293px;
-                height: 45px;
-                text-align: center;
-                vertical-align: middle;
-                line-height: 45px;
+            &:first-child+div {
                 font-size: 21px;
+                font-weight: 400;
+                flex-basis: 270px;
+                text-align: center;
+
+                & .call {
+                    display: inline-block;
+                    color: #ee3643;
+                    border: 3px solid white;
+                    background-color: #f3f7f8;
+                    width: 270px;
+                    height: 45px;
+                    vertical-align: middle;
+                    line-height: 45px;
+                    position: relative;
+
+                    &::before {
+                        content: url("../img/icon-phone.svg");
+                        width: 19px;
+                        height: 19px;
+                        position: absolute;
+                        left: 15px;
+                        top: 0;
+                    }
+                }
+
+                & .adress {
+                    width: 250px;
+                    height: 13px;
+                    color: #32425c;
+                    font-size: 14px;
+                    line-height: 24px;
+                    margin: 0 auto;
+                }
+
+            }
+
+            &:last-child {
+                display: flex;
+                flex-basis: 280px;
+                align-items: flex-start;
+            }
+
+            .btn {
+                font-size: 21px;
+                color: #000000;
+                background-color: #ffffff;
+                line-height: 45px;
+                text-align: center;
+
+                &:hover {
+                    color: #ee3643;
+                }
 
                 &:active {
                     color: rgba(0, 0, 0, 0.3);
                 }
+            }
 
-                &::before,
-                &::after {
-                    content: url("../img/icon-user.svg");
-                    width: 20px;
-                    height: 18px;
-                    background-repeat: no-repeat;
-                    position: absolute;
-                    top: 4px;
-                    left: 13px;
-                }
 
-                &::after {
-                    content: url("../img/icon-logout.svg");
-                    left: 265px;
+            .btn-login {
+                margin-right: 10px;
+                flex-grow: 1.2;
+
+                &::before {
+                    content: url("../img/icon-login.svg");
+                    margin-right: 15px;
                 }
 
                 &:hover:before {
-                    content: url("../img/icon-user_hover.svg");
+                    filter: contrast(0%) sepia(25%) hue-rotate(190deg) brightness(0.8) saturate(500%);
                 }
 
-                &:hover:after {
-                    content: url("../img/icon-logout_hover.svg");
+                &:active:before {
+                    filter: none;
                 }
             }
 
-            /* стили и псевдоиконки для пользователя */
+            .btn-reg {
+                flex-grow: 1.5;
+            }
 
-            .user-navigation {
-                margin-left: 10px;
+            /* Стили для catalog.html > .user */
+            &.user-block {
+                display: flex;
+                flex-direction: column;
+                // justify-content: center;
+                align-items: center;
+                flex-basis: 300px;
 
-                span {
-                    color: #32425c;
-                }
-
-                a {
-                    margin: 0px 10px;
-                    color: #32425c;
-                    text-decoration: underline;
-
-                    &:hover {
-                        color: #ee3643;
-                    }
+                .user {
+                    width: 100%;
+                    color: #000;
+                    background-color: #fff;
+                    text-align: center;
+                    vertical-align: middle;
+                    line-height: 45px;
+                    font-size: 21px;
 
                     &:active {
-                        color: rgba(50, 66, 92, 0.3);
+                        color: rgba(0, 0, 0, 0.3);
+                    }
+
+                    &::before,
+                    &::after {
+                        content: url("../img/icon-user.svg");
+                        width: 20px;
+                        height: 18px;
+                    }
+
+                    &:before {
+                        margin-right: 15px;
+                    }
+
+                    &:after {
+                        margin-left: 40px;
+                    }
+
+                    &::after {
+                        content: url("../img/icon-logout.svg");
+                    }
+
+                    &:hover:before {
+                        content: url("../img/icon-user_hover.svg");
+                    }
+
+                    &:hover:after {
+                        content: url("../img/icon-logout_hover.svg");
+                    }
+                }
+
+                /* стили и псевдоиконки для пользователя */
+
+                .user-navigation {
+                    margin-top: 4px;
+
+                    span {
+                        color: #32425c;
+                    }
+
+                    a {
+                        line-height: 18px;
+                        font-size: 16px;
+                        margin: 0px 10px;
+                        color: #32425c;
+                        text-decoration: underline;
+
+                        &:hover {
+                            color: #ee3643;
+                        }
+
+                        &:active {
+                            color: rgba(50, 66, 92, 0.3);
+                        }
                     }
                 }
             }
         }
+
     }
 
     .header-nav {
+        display: flex;
+        justify-content: space-around;
         background-color: #32425c;
+        vertical-align: middle;
         height: 60px;
         border-bottom: 2px solid #293449;
+        padding: 0px 20px;
 
-        li {
-            height: 60px;
-            width: 134px;
+        /* не могу доделать края при наведении */
+        div {
+            line-height: 60px;
+            padding: 0 30px;
 
-            a {
-                line-height: 60px;
-                vertical-align: middle;
-
-                &:active {
-                    opacity: 0.5;
-                }
+            &:active {
+                opacity: 0.5;
             }
         }
     }
 }
 
+
 /* Хлебные крохи catalog.html */
 .breadcrums-container {
-    height: 60px;
+    display: flex;
+    // height: 60px;
     vertical-align: middle;
     line-height: 60px;
 
-    li {
-        &:first-child {}
+    div {
 
         &:not(:last-child) {
             margin-right: 15px;
@@ -422,10 +436,8 @@ html {
 
 /* footer */
 footer {
-    position: relative;
-    width: 940px;
-    margin-left: auto;
-    margin-right: auto;
+    height: 300px;
+    background-color: #32425c;
 
     color: #f1f5f7;
     font-family: "Cuprum";
@@ -433,109 +445,93 @@ footer {
     font-weight: 400;
     line-height: 24px;
 
-    &>div {
+    .wrapper-block {
+        display: flex;
+        flex-direction: column;
         width: 1200px;
-        background-color: #32425c;
-        position: absolute;
-        z-index: -1;
-        height: 300px;
-        margin-left: -130px;
+        margin: 0 auto;
 
-    }
-
-    a {
-        color: #f1f5f7;
-    }
-
-
-
-    .footer-top ul {
-        height: 62px;
-        margin-bottom: 30px;
-
-        li:not(:first-child) {
-            margin-left: 60px;
+        a {
+            color: #f1f5f7;
         }
 
-        li>a>img {
-            margin-right: 50px;
 
-        }
+        .footer-top,
+        .footer-menu {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            background-color: #32425c;
 
-        li:not(:first-child) a {
-            line-height: 62px;
-            vertical-align: bottom;
-        }
-    }
-
-    .footer-menu ul {
-        margin: 0;
-        padding: 0;
-        height: 62px;
-        line-height: 62px;
-
-        margin-bottom: 50px;
-
-        li {
-            vertical-align: top;
-            line-height: 24px;
-
-            p {
-                margin: 0 90px 0 0;
+            div:not(:first-child):not(:last-child) {
+                margin: 0px 30px;
             }
 
-            & a {
+            div:not(.footer-logo) a {
+
+                &:hover {
+                    text-decoration: underline;
+                }
+
+                &:active {
+                    text-decoration: none;
+                    opacity: 0.5;
+                }
+            }
+
+        }
+
+        .footer-top {
+            height: 62px;
+
+            .footer-logo {
+                align-self: flex-start;
+                margin-right: 110px;
+            }
+        }
+
+        .footer-menu {
+            display: flex;
+            padding-top: 15px;
+            align-items: flex-start;
+            line-height: 62px;
+
+            a {
                 color: #ffd180;
             }
 
-            &:not(:last-child) a {
-                margin-right: 50px;
+            div p {
+                margin-top: 15px;
+                line-height: 24px;
             }
-
         }
-    }
 
-    .social-block {
-        height: 107px;
-        margin: 0;
-        padding: 0;
-
-        &>div {
-            width: 1200px;
+        .social-block {
+            display: flex;
             height: 107px;
-            background-color: #293449;
-            margin-left: -130px;
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            z-index: -1;
-        }
+            justify-content: space-between;
+            align-items: center;
 
-        ul {
-            line-height: 125px;
-            vertical-align: middle;
-
-            li,
             div {
-                display: inline-block;
-                font-family: "Cuprum";
                 font-size: 16px;
-                font-weight: 400;
                 line-height: 18px;
-            }
 
-            div {
-                margin: 0 120px 0 140px;
+                &:first-child {
+                    margin-right: 30px;
+                }
 
-                a {
-                    margin: 0;
-                    padding: 0;
+                &.social-btn a {
                     display: inline-block;
                     width: 42px;
                     height: 42px;
                     border-radius: 50%;
                     background: url('../img/icon-vk.svg') no-repeat 50% 50%;
                     background-color: #212a3a;
+
+                    &:hover,
+                    &:active {
+                        background-color: #ee3643;
+                    }
 
                     &:not(:last-child) {
                         margin-right: 4px;
@@ -553,10 +549,21 @@ footer {
                         }
                     }
                 }
-            }
 
-            li:last-child {
-                margin-left: 50px;
+                &:last-child {
+                    margin-right: 15px;
+                }
+
+                &:not(:first-child):not(.social-btn) {
+
+                    a {
+                        color: #ffd180;
+
+                        &:active {
+                            color: #ee3643;
+                        }
+                    }
+                }
             }
         }
     }
