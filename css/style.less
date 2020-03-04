@@ -382,10 +382,6 @@ header {
                     background-color: #fff;
                     outline: none;
 
-                    &::placeholder {
-                        // color: #000;
-                    }
-
                     &+label {
                         background-image: url('../img/icon-search_red.svg');
                     }
@@ -780,7 +776,7 @@ header {
                 z-index: 10;
             }
 
-            .prev {}
+            // .prev {}
 
             .next {
                 background-image: url('../img/icon-right.svg');
@@ -1194,20 +1190,6 @@ header {
                 font-size: 17px;
             }
 
-
-            .range-controls {
-                background-color: red;
-                margin-bottom: 10px;
-            }
-
-            .price-controls {
-               
-                input {
-                    width: 80px;
-                }
-
-            }
-
             ul {
                 list-style-type: none;
                 margin: 0;
@@ -1226,10 +1208,11 @@ header {
                 }
             }
 
-            .by-firm {}
+            // .by-firm {}
 
             .by-supply {
                 margin-bottom: 70px;
+
                 label {
                     // border: 2px solid red;
                     margin-bottom: 10px;
@@ -1533,67 +1516,185 @@ footer {
 
 /* Модальные окна */
 
+.btn-close-map,
+.modal-product-btn-close,
+.close-write-us {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 25px;
+    height: 25px;
+    border: none;
+    background: url('../img/icon-close.svg') no-repeat center;
+    cursor: pointer;
+    z-index: 101;
+}
+
+.modal-btn-bg {
+    background-color: #f4f4f4;
+    padding: 37px 80px;
+    min-height: 112px;
+}
+
+
 .modal-add-product {
     display: none;
+    position: fixed;
+    z-index: 100;
+    top: 10%;
+    left: 50px;
+    transform: translateX(50%);
+    background-color: #fff;
+    width: 620px;
+    height: 282px;
+    border-radius: 3px;
+    border-top: 7px solid #ff5357;
+    box-shadow: 0 30px 50px rgba(0, 0, 0, .7);
+
+
+    .flex-block {
+        display: flex;
+        height: inherit;
+        flex-direction: column;
+
+        p {
+            position: relative;
+            width: 100%;
+            padding-top: 70px;
+            align-self: flex-start;
+            flex: auto;
+            text-align: center;
+            font-size: 30px;
+
+            &::before {
+                content: url('../img/icon-mark.svg');
+                left: 10%;
+                top: 50%;
+                transform: translateY(-50%);
+                position: absolute;
+            }
+        }
+
+        div {
+            width: 100%;
+            align-self: flex-end;
+            display: flex;
+            justify-content: space-between;
+
+            a {
+                width: 220px;
+                height: 38px;
+
+                &+a:not(:hover) {
+                    font-weight: 600;
+                    background-color: #fff;
+                    color: #000;
+                }
+            }
+        }
+    }
 }
 
 .modal-map {
     display: none;
+    position: fixed;
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 446px;
+    width: inherit;
+    box-shadow: 0 30px 50px rgba(0, 0, 0, .7);
+
 }
 
 .modal-write-us {
     display: none;
+    position: fixed;
+    border-radius: 3px;
+    border-top: 7px solid #ff5357;
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 620px;
+    height: 430px;
+    background-color: #fff;
+    box-shadow: 0 30px 50px rgba(0, 0, 0, .7);
+
+    .write-us-form {
+        height: inherit;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        .form-answer {
+            height: inherit;
+            margin: 46px 80px 0px;
+
+            label {
+                font-size: 18px;
+                float: left;
+
+                input:focus,
+                textarea:focus {
+                    outline: none;
+                }
+
+                // width: 220px;
+                &+label {
+                    float: right;
+                }
+
+                input {
+                    padding: 10px;
+                    width: 220px;
+                    height: 38px;
+                    border: 2px solid #dee3e4;
+                    border-radius: 3px;
+
+                    &::placeholder {
+                        font-family: 'PTSans';
+                        font-size: 13px;
+                    }
+
+                }
+            }
+
+            .text-letter {
+                margin-top: 20px;
+
+                textarea {
+                    padding: 10px;
+                    float: left;
+                    border-radius: 3px;
+                    border: 2px solid #dee3e4;
+
+                    &::placeholder {
+                        font-family: 'PTSans';
+                        font-size: 13px;
+                    }
+                }
+            }
+        }
+
+        .form-btn {
+
+
+            button {
+                border: none;
+                border-radius: 5px;
+                width: 100%;
+            }
+        }
+    }
+
 }
 
-/* icons checkbox */
-.producent-input-check {
-    display: inline-block;
-    vertical-align: top;
-    position: relative;
-    cursor: pointer;
-
-    & input {
-        width: 27px;
-        height: 23px;
-        margin: 0;
-        padding: 0;
-        position: absolute;
-        left: 0;
-        top: 50%;
-        margin-top: -7px;
-        cursor: pointer;
-        z-index: 10;
-        opacity: 0;
-    }
-
-    & label {
-        font-size: 14px;
-        line-height: 22px;
-        display: block;
-        padding-left: 30px;
-        position: relative;
-        z-index: 1;
-        cursor: pointer;
-    }
-
-    & label:before {
-        display: block;
-        position: absolute;
-        left: 0;
-        top: 50%;
-        width: 27px;
-        height: 23px;
-        margin-top: -10px;
-        background: url("../img/checkbox-off.svg") no-repeat;
-        content: "";
-    }
-
-    & input:checked+label:before {
-        background: url("../img/checkbox-on.svg");
-    }
+.popup-show {
+    display: block;
 }
 
-.popup {
+
+.popup-hidden {
     display: none;
 }
 
@@ -1601,4 +1702,76 @@ footer {
     content: '';
     clear: both;
     display: table;
+}
+
+/* Стили бегунка цены range */
+.range-controls {
+    position: relative;
+    padding: 0 30px;
+    margin-bottom: 32px;
+    height: 80px;
+    margin: 14px 0 10px;
+    overflow: hidden;
+    background: #f7f3ec;
+    border-radius: 3px;
+
+    .scale {
+        height: 2px;
+        margin-top: 39px;
+        background: #d7dcde;
+    }
+
+    .bar {
+        width: 87%;
+        height: 2px;
+        background: #00ca74;
+    }
+
+    .range-toggle {
+        box-sizing: content-box;
+        position: absolute;
+        top: 30px;
+        width: 4px;
+        height: 4px;
+        background: #ababab;
+        border: 8px solid #fff;
+        border-radius: 50%;
+        cursor: pointer;
+
+        &:hover {
+            background: #1c4f80;
+        }
+    }
+
+    .range-toggle-min {
+        left: 21px;
+    }
+
+    .range-toggle-max {
+        left: 161px;
+    }
+}
+
+/* Стили цен price-controls */
+.price-controls {
+    margin-bottom: 26px;
+    display: flex;
+    justify-content: space-between;
+
+    input[type=number] {
+        width: 85px;
+        padding: 8px 2px 10px 8px;
+        font-size: 17px;
+        font-family: "PT Sans", "Arial", sans-serif;
+        text-align: center;
+        background-color: #f7f3ec;
+        border: none;
+        border-radius: 3px;
+    }
+
+    span {
+        font-size: 17px;
+        line-height: 30px;
+    }
+
 }
