@@ -16,9 +16,7 @@
       <div class="header-top">
         <div class="container clearfix">
           <div class="logo">
-            <h1>
-              <a class="btn btn-red" href="index.html">Техномарт</a>
-            </h1>
+            <a class="btn btn-red" href="index.html">Техномарт</a>
           </div>
           <div class="header-top-wrapper">
             <div class="search">
@@ -87,7 +85,7 @@
           <div class="content-flex-block">
             <!-- Фильтры -->
             <div class="left-filters">
-              <form class="form-filters" action="#" enctype="multipart/form-data" method="get">
+              <form class="form-filters" id="form-filters" action="#" enctype="multipart/form-data" method="get">
                 <div class="filter btn-flex">
                   <span>Фильтр:</span>
                 </div>
@@ -146,7 +144,7 @@
                     </li>
                   </ul>
                 </div>
-                <button class="btn btn-show" type="submit">Показать</button>
+                <button class="btn btn-show" type="submit" form="form-filters">Показать</button>
               </form>
             </div>
             <!-- "Список товаров" -->
@@ -164,16 +162,6 @@
               <!-- Каталог -->
               <div class="catalog-items">
                 <!-- Первый ряд -->
-                <article class="modal-add-product">
-                  <button class="modal-product-btn-close" type="button"></button>
-                  <div class="flex-block">
-                    <p>Товар добавлен в корзину!</p>
-                    <div class="add-product-button modal-btn-bg">
-                      <a class="btn btn-red active-btn" href="#ordering">Оформить заказ</a>
-                      <a class="btn btn-red" href="#">Продолжить Покупки</a>
-                    </div>
-                  </div>
-                </article>
                 <div class="item">
                   <div class="item-hover">
                     <a class="btn icon basket btn-buy" href="#">Купить</a>
@@ -331,8 +319,8 @@
       </section>
       <section class="footer-down">
         <div class="container">
-          <div>
-            <p>© 2010–2019 Компания «Техномарт»<br>
+          <div class="copyright-block">
+            <p>© 2010–2019 Компания «Техномарт»
               Все права защищены</p>
           </div>
           <div class="social-btn">
@@ -340,17 +328,25 @@
             <a href="https://www.facebook.com/htmlacademy" class="fb-btn"></a>
             <a href="https://www.instagram.com/htmlacademy/" class="it-btn"></a>
           </div>
-          <div>
+          <div class="callback-footer-block">
             <p>Обратная связь:<br>
-              <a class="btn-under" href="#">mail@htmlacademy.ru</a></p>
-          </div>
-          <div>
+              <a class="btn-under" href="mailto:#">mail@htmlacademy.ru</a></p>
             <p>Разработано —<br>
               <a class="btn-under" href="https://htmlacademy.ru/">htmlacademy.ru</a></p>
           </div>
         </div>
       </section>
     </footer>
+    <article class="modal-add-product">
+      <button class="modal-product-btn-close" type="button"></button>
+      <div class="flex-block">
+        <p>Товар добавлен в корзину!</p>
+        <div class="add-product-button modal-btn-bg">
+          <a class="btn btn-red active-btn" href="#ordering">Оформить заказ</a>
+          <a class="btn btn-red" href="#">Продолжить Покупки</a>
+        </div>
+      </div>
+    </article>
     <script src="/js/modalOpenClose.js"></script>
 
   </body>
