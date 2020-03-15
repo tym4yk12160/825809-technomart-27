@@ -1,3 +1,4 @@
+'use strict';
 var btnShowMap = document.querySelector(".js-map"),
     map = document.querySelector(".modal-map"),
     closeMap = document.querySelector(".btn-close-map"),
