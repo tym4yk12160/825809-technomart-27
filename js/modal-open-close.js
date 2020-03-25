@@ -7,6 +7,8 @@ var btnShowMap = document.querySelector(".js-map"),
     buy = document.querySelector(".modal-add-product"),
     closeBuy = document.querySelector(".modal-product-btn-close"),
     btnRed = document.querySelector(".basket-header-js"),
+    bookmarkRed = document.querySelectorAll(".bookmark-js"),
+    btnRedBookmark = document.querySelector(".bookmark-header-js"),
     // Напишите нам
     btnShowWriteUs = document.querySelector(".btn-write-us"),
     closeWriteUs = document.querySelector(".close-write-us"),
@@ -43,11 +45,21 @@ if (btnShowWriteUs && writeUs && closeWriteUs) {
         });
 }
 // в корзину
-for (var i = 0; i < btnShowBuy.length; i++)
+for (var i = 0; i < btnShowBuy.length; i++) {
+
     btnShowBuy[i].addEventListener("click", function (a) {
         a.preventDefault(), buy.classList.add("popup-show");
         btnRed.classList.add("btn-red-basket");
     });
+}
+// действие с закладками
+for (var j = 0; j < bookmarkRed.length; j++) {
+    bookmarkRed[j].addEventListener("click", function (a) {
+        a.preventDefault();
+        btnRedBookmark.classList.add("btn-red-basket");
+    });
+}
+
 closeBuy.addEventListener("click", function (a) {
     a.preventDefault(), buy.classList.remove("popup-show");
 }),
