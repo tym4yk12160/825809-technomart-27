@@ -5,8 +5,7 @@
     <meta charset="utf-8" />
     <title>HTML Academy: Техномарт</title>
     <link rel="stylesheet" href="css/normalize.css">
-    <!-- <link rel="stylesheet" href="css/style.css" /> -->
-    <link rel="stylesheet" href="css/style-dist.css" />
+    <link rel="stylesheet" href="css/style.min.css">
   </head>
 
   <body>
@@ -14,18 +13,16 @@
       <div class="header-top">
         <div class="container clearfix">
           <div class="header-logo">
-            <h1>
-              <a class="btn btn-red">Техномарт</a>
-            </h1>
+            <a class="btn btn-red">Техномарт</a>
           </div>
           <div class="header-top-wrapper">
             <form class="search-form" action="https://echo.htmlacademy.ru" method="get" enctype="multipart/form-data">
               <input type="search" name="search" id="search" placeholder="Поиск:">
               <label class="search-label" for="search"></label>
             </form>
-            <a class="link-header-top icon bookmarks btn-bg" href="#bookmarks">Закладки: <span
+            <a class="link-header-top icon bookmarks btn-bg bookmark-header-js" href="#bookmarks">Закладки: <span
                 class="bookmarks-score">0</span></a>
-            <a class="link-header-top icon basket btn-bg" href="#basket">Корзина: <span
+            <a class="link-header-top icon basket btn-bg basket-header-js" href="#basket">Корзина: <span
                 class="basket-score">0</span></a>
             <a class="link-header-top button ordering" href="#ordering">Оформить заказ</a>
           </div>
@@ -67,25 +64,25 @@
         <div class="container">
           <div class="promo-block clearfix">
             <div class="promo-item">
-              <h3>Материалы</h3>
+              <h3 class="title-promo">Материалы</h3>
               <a class="btn btn-opacity" href="#">На любой вкус</a>
               <div class="promo-bg-image">
-                <img src="/img/icon-1.svg" width="44" height="65" alt="фоновая картинка элемента">
+                <img src="img/icon-1.svg" width="44" height="65" alt="фоновая картинка элемента">
               </div>
               <p class="new-item">new</p>
             </div>
             <div class="promo-item">
-              <h3>Инструмент</h3>
+              <h3 class="title-promo">Инструмент</h3>
               <a class="btn btn-opacity" href="#">На все случаи</a>
               <div class="promo-bg-image">
-                <img src="/img/icon-2.svg" width="75" height="61" alt="фоновая картинка элемента">
+                <img src="img/icon-2.svg" width="75" height="61" alt="фоновая картинка элемента">
               </div>
             </div>
             <div class="promo-item">
-              <h3>Техника</h3>
+              <h3 class="title-promo">Техника</h3>
               <a class="btn btn-opacity" href="#">Для стройки</a>
               <div class="promo-bg-image">
-                <img src="/img/icon-3.svg" width="78" height="62" alt="фоновая картинка элемента">
+                <img src="img/icon-3.svg" width="78" height="62" alt="фоновая картинка элемента">
               </div>
             </div>
             <article class="slider">
@@ -115,29 +112,29 @@
               </div>
             </article>
             <div class="promo-item">
-              <h3>Скидки 50%</h3>
+              <h3 class="title-promo">Скидки 50%</h3>
               <a class="btn btn-opacity" href="#">На 350 товаров</a>
               <div class="promo-bg-image">
-                <img src="/img/icon-4.svg" width="59" height="72" alt="фоновая картинка элемента">
+                <img src="img/icon-4.svg" width="59" height="72" alt="фоновая картинка элемента">
               </div>
             </div>
             <div class="promo-item">
-              <h3>Доставка</h3>
+              <h3 class="title-promo">Доставка</h3>
               <a class="btn btn-opacity" href="#">Бесплатно</a>
               <div class="promo-bg-image">
-                <img src="/img/icon-5.svg" width="78" height="63" alt="фоновая картинка элемента">
+                <img src="img/icon-5.svg" width="78" height="63" alt="фоновая картинка элемента">
               </div>
             </div>
           </div>
           <div class="title-populars-block">
-            <h3>Популярные товары:</h3>
+            <h3 class="title">Популярные товары:</h3>
             <a class="btn btn-red" href="#">Все популярные товары</a>
           </div>
           <div class="items-popular">
             <article class="item">
               <div class="item-hover">
                 <a class="btn icon basket btn-buy" href="#">Купить</a>
-                <a class="btn btn-bookmarks" href="#">В Закладки</a>
+                <a class="btn btn-bookmarks bookmark-js" href="#">В Закладки</a>
               </div>
               <div class="drill-image">
                 <img src="img/perforator-1.png" width="127" height="112" alt="Перфоратор Bosch BFG 3000">
@@ -151,7 +148,7 @@
             <article class="item">
               <div class="item-hover">
                 <a class="btn icon basket btn-buy" href="#">Купить</a>
-                <a class="btn btn-bookmarks" href="#">В Закладки</a>
+                <a class="btn btn-bookmarks bookmark-js" href="#">В Закладки</a>
               </div>
               <div class="drill-image">
                 <img src="img/perforator-3.png" width="127" height="112" alt="Перфоратор Bosch BFG 3000">
@@ -165,7 +162,7 @@
             <article class="item">
               <div class="item-hover">
                 <a class="btn icon basket btn-buy" href="#">Купить</a>
-                <a class="btn btn-bookmarks" href="#">В Закладки</a>
+                <a class="btn btn-bookmarks bookmark-js" href="#">В Закладки</a>
               </div>
               <div class="drill-image">
                 <img src="img/perforator-2.png" width="127" height="112" alt="Перфоратор Bosch BFG 3000">
@@ -179,7 +176,7 @@
             <article class="item">
               <div class="item-hover">
                 <a class="btn icon basket btn-buy" href="#">Купить</a>
-                <a class="btn btn-bookmarks" href="#">В Закладки</a>
+                <a class="btn btn-bookmarks bookmark-js" href="#">В Закладки</a>
               </div>
               <div class="drill-image">
                 <img src="img/perforator-3.png" width="127" height="112" alt="Перфоратор Bosch BFG 3000">
@@ -192,7 +189,7 @@
             </article>
           </div>
           <div class="title-producent-block">
-            <h3>Популярные Производители:</h3>
+            <h3 class="title">Популярные Производители:</h3>
             <a class="btn btn-red" href="#">Все производители</a>
           </div>
           <div class="items-popular-producent">
@@ -217,8 +214,8 @@
         <div class="container">
           <div class="service-container">
             <div class="service-items-title">
-              <h3>Сервисы</h3>
-              <p>Хороший интернет-магазин отличается от плохого не только ценами!
+              <h3 class="title">Сервисы</h3>
+              <p class="text">Хороший интернет-магазин отличается от плохого не только ценами!
                 Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.</p>
             </div>
             <div class="service-items">
@@ -232,23 +229,23 @@
               </div>
               <div class="service-right-block">
                 <div class="service-right-item delivery">
-                  <h3>Доставка</h3>
-                  <p>Мы с удовольствием доставим ваш товар прямо
+                  <h3 class="title">Доставка</h3>
+                  <p class="text">Мы с удовольствием доставим ваш товар прямо
                     к вашему подъезду совершенно бесплатно!
                     Ведь мы неплохо заработаем,
                     поднимая его на ваш этаж!</p>
                 </div>
                 <div class="service-right-item guarantee">
-                  <h3>Гарантия</h3>
-                  <p>Если купленный у нас товар поломается или заискрит,
+                  <h3 class="title">Гарантия</h3>
+                  <p class="text">Если купленный у нас товар поломается или заискрит,
                     а также в случае пожара, спровоцированного его возгоранием,
                     вы всегда можете быть уверены в нашей гарантии.
                     Мы обменяем сгоревший товар на новый.
                     Дом уж восстановите как-нибудь сами.</p>
                 </div>
                 <div class="service-right-item credit">
-                  <h3>Кредит</h3>
-                  <p>Залезть в долговую яму стало проще!
+                  <h3 class="title">Кредит</h3>
+                  <p class="text">Залезть в долговую яму стало проще!
                     Кредитные консультанты придут вам на помощь.</p>
                   <a class="btn-send-request btn btn-red" href="#">отправить заявку</a>
                 </div>
@@ -264,11 +261,11 @@
               <h2 class="title title-info-block">
                 КОМПАНИЯ «Техномарт»
               </h2>
-              <p>
+              <p class="text">
                 Настоящий мужской шоппинг начинается здесь! Огромный выбор товаров
                 для ремонта и строительства не оставит равнодушными любителей
                 сэкономить на гастарбайтерах.</p>
-              <p>Мы можем доставить ваш товар в самые
+              <p class="text">Мы можем доставить ваш товар в самые
                 отдаленные точки России!<br>
                 Техномарт работает со многими транспортными
                 компаниями:</p>
@@ -281,7 +278,7 @@
             </div>
             <div class="contacts-block">
               <h2 class="title title-info-block">КОНТАКТЫ</h2>
-              <p>
+              <p class="text">
                 Вы можете забрать товар сами,<br>
                 заехав в наш офис:
               </p>
@@ -304,13 +301,13 @@
             <nav class="nav-items">
               <a class="link-nav-footer btn-under" href="#">Компания</a>
               <a class="link-nav-footer btn-under" href="#">Новости</a>
-              <a class="link-nav-footer btn-under" href="#">Каталог</a>
+              <a class="link-nav-footer btn-under" href="catalog.html">Каталог</a>
               <a class="link-nav-footer btn-under" href="#">Доставка</a>
               <a class="link-nav-footer btn-under" href="#">Контакты</a>
             </nav>
           </div>
           <div class="top-middle">
-            <p class="info-footer">
+            <p class="info-footer text">
               г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8<br>
               +7 (812) 555-05-55
             </p>
@@ -385,7 +382,7 @@
         </div>
       </form>
     </div>
-    <script src="/js/modal-open-close.min.js"></script>
+    <script src="js/modal-open-close.min.js"></script>
   </body>
 
 </html>
