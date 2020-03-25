@@ -6,6 +6,7 @@ var btnShowMap = document.querySelector(".js-map"),
     btnShowBuy = document.querySelectorAll(".btn-buy"),
     buy = document.querySelector(".modal-add-product"),
     closeBuy = document.querySelector(".modal-product-btn-close"),
+    btnRed = document.querySelector(".basket-header-js"),
     // Напишите нам
     btnShowWriteUs = document.querySelector(".btn-write-us"),
     closeWriteUs = document.querySelector(".close-write-us"),
@@ -41,9 +42,11 @@ if (btnShowWriteUs && writeUs && closeWriteUs) {
                     writeUs.classList.remove("modal-error"));
         });
 }
+// в корзину
 for (var i = 0; i < btnShowBuy.length; i++)
     btnShowBuy[i].addEventListener("click", function (a) {
         a.preventDefault(), buy.classList.add("popup-show");
+        btnRed.classList.add("btn-red-basket");
     });
 closeBuy.addEventListener("click", function (a) {
     a.preventDefault(), buy.classList.remove("popup-show");
